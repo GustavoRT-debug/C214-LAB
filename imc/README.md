@@ -1,4 +1,4 @@
-_Calculadora de IMC_
+_Calculadora de IMC - Explicação do Código_
 _Variáveis de Estado_-
 As variáveis de estado são usadas para armazenar informações que podem ser acessadas e modificadas dentro do código. Nesse caso, as variáveis peso, altura e imc são usadas para rastrear o peso, altura e índice de massa corporal, respectivamente. A variável classificacao armazenará a classificação do IMC, e dicasSaudaveis conterá as dicas de saúde correspondentes à classificação.
 
