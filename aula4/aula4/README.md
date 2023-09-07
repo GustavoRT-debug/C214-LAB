@@ -1,107 +1,16 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+O codigo em questão cria um pequeno aplicativo da web que exibe uma mensagem de "GOL MARCADO!" com uma animação quando um botão é pressionado.
 
----
+_Importações:_
+O código começa importando o componente Jogador de um arquivo chamado "Jogador.svelte" e algumas funções do pacote "svelte-motion", incluindo Motion, useAnimation e transition.
 
-# svelte app
+"_Variáveis de Estado:_ Duas variáveis de estado são declaradas - showMessage e controls. showMessage controla se a mensagem "GOL MARCADO!" deve ser exibida, e controls é usado para controlar a animação.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+_Função marcaGol():_ Esta função é chamada quando um evento ocorre, como clicar em um botão. Quando chamada, ela faz o seguinte...Define showMessage como verdadeiro, para exibir a mensagem.Inicia uma animação usando controls.start(). Neste caso, a animação ajusta a opacity (opacidade) e y (posição vertical) do elemento que será animado.
+Configura a transição para a animação usando a função transition importada anteriormente.
+Define um temporizador para esconder a mensagem após 2 segundos, diminuindo a opacidade e movendo-a para cima (y: -20).
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+_Estrutura do Aplicativo:_ O conteúdo principal do aplicativo é definido no elemento <main>. Há um cabeçalho <h1> e um componente Jogador que pode acionar a função marcaGol().
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+_Elemento de Mensagem Animada:_ O elemento que exibe a mensagem "GOL MARCADO!" é envolto em um componente motion.div do "svelte-motion" o elemento é configurado para animar sua opacidade e posição vertical com base nas alterações em controls. A mensagem só é exibida quando showMessage é verdadeiro.
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+"Estilos CSS:" Os estilos CSS estão definidos na seção <style>. Eles estilizam a mensagem, tornando-a colorida, centralizada na parte inferior da tela e com sombras para dar uma aparência agradável.
