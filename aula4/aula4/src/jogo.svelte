@@ -1,6 +1,6 @@
 <script>
   import Jogador from "./Jogador.svelte";
-  import { Motion, useAnimation, transition } from "svelte-motion"; // Importe a função "transition" da biblioteca "svelte-motion"
+  import { Motion, useAnimation, transition } from "svelte-motion";
 
   let showMessage = false;
   const controls = useAnimation();
@@ -9,14 +9,14 @@
     console.log("Marcou 1 GOL");
     showMessage = true;
 
-    // Use a função "transition" para configurar a transição
+    //função "transition" para configurar a transição
     controls.start({
       opacity: 1,
       y: 0,
-      transition: transition, // Adicione a transição aqui
+      transition: transition,
     });
 
-    // Defina um tempo limite para esconder a mensagem após um período de tempo
+    //tempo limite para esconder a mensagem após um período de tempo
     setTimeout(() => {
       showMessage = false;
       controls.start({ opacity: 0, y: -20 });
