@@ -1,6 +1,6 @@
 <script>
   import Jogador from "./Jogador.svelte";
-  import { Motion, useAnimation, transition } from "svelte-motion";
+  import { Motion, useAnimation } from "svelte-motion";
 
   let showMessage = false;
   const controls = useAnimation();
@@ -9,14 +9,15 @@
     console.log("Marcou 1 GOL");
     showMessage = true;
 
-    //função "transition" para configurar a transição
+    // Configura a animação
     controls.start({
       opacity: 1,
       y: 0,
-      transition: transition,
+      duration: 500, // Duração da animação em milissegundos
+      easing: (t) => t * (2 - t), // Easing personalizado para uma animação de mola
     });
 
-    //tempo limite para esconder a mensagem após um período de tempo
+    // Aguarda um período de tempo antes de esconder a mensagem
     setTimeout(() => {
       showMessage = false;
       controls.start({ opacity: 0, y: -20 });
@@ -25,10 +26,11 @@
 </script>
 
 <main>
-  <h1>Exibe a informação quando marca GOL</h1>
+  <h1>MARCADOR DE GOLS</h1>
   <Jogador acao={marcaGol} />
 </main>
 
+<!-- svelte-ignore missing-declaration -->
 <motion.div
   in:transition={{ duration: 0.5 }}
   out:transition={{ duration: 0.5 }}
