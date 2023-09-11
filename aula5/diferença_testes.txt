@@ -1,0 +1,3 @@
+Diferença entre testes funcionais e nao funcionais:
+A diferença entre eles é que eles testam "testes funcionais", testam a funcionalidade do aplicativo e verificam se funcionam conforme o esperado
+Os "testes não funcionais" testam outros aspectos do aplicativo que afetam a satisfação do usuário e a qualidade do aplicativo
