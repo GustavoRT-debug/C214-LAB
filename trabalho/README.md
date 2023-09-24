@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-O Gerenciador de Tarefas é um programa de linha de comando que permite aos usuários adicionar, atualizar o status, excluir e listar tarefas. Ele oferece uma maneira simples de organizar suas tarefas diárias.
+O Gerenciador de Tarefas é um programa que permite aos usuários adicionar, atualizar o status, excluir e listar tarefas. Ele oferece uma maneira simples de organizar suas tarefas diárias.
 
 ## Como usar
 
