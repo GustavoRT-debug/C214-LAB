@@ -1,1 +1,1 @@
-![Workflow Status](https://github.com/GustavoRT-debug/C214-LAB/actions/workflows/nome-do-seu-fluxo.yml/badge.svg)
+![Workflow Status](https://github.com/GustavoRT-debug/C214-LAB/actions/workflows/main.yml/badge.svg)
