@@ -21,9 +21,11 @@ jobs:
       - name: Install Dependencies
         run: |
           cd aula8
+          ls
           npm install
 
       - name: Executar testes
         run: |
+          cd aula8
           ls
           npm test
