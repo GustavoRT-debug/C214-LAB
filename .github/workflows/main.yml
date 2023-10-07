@@ -19,7 +19,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd aula8
+          npm install
 
       - name: Executar testes
-        run: npm test
+        run: |
+          npm test
